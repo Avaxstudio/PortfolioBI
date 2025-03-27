@@ -83,7 +83,7 @@ resource "azurerm_windows_virtual_machine" "win_vm" {
     version   = "latest"
   }
 
-  admin_password = "P@ssword123!"
+  admin_password = "PortfolioB1!"
 }
 
 resource "azurerm_linux_virtual_machine" "linux_vm" {
@@ -111,6 +111,6 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
 
   admin_ssh_key {
     username   = each.value.admin_username
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdaeeXX+HKY+EPxDWx1NkQ7dp9rWM4eGUQCwHSOiEa9yEwBqijQb78+RsxunpJ/WAZNol8jmYhK0lIz4CDvpHsFBmh3uByT6TRESssfeu99ur2ZRiVLCmS6CI/usR1OTo7AUmqESMoVZ4zoR6AsKTpAzh16MWHZJYR8avDoPUBu01UkQQinlgvXJD7eRhRmRR1uiVO53tdcZBDiO0VBxTsxJ6KSOfwM3boLRAofpqQ3r8VhWXySSej5Msd8d/PPpdoK9gKGlIntcVtcsBc8C0HUwXGKwpmUwmlIGP3Zp7PKb2wG4I5erAZV5CrveDjD6wjyEoOfqdvbhAVUdNa6XBNv4vHj5JR7vpLX4KXDqvFMVoq4oVCTjPqEOfQrheR9rNkgFmfnv5g7YXaLfB4E0LRpt0UYIQkkqjtP5l0ZJQDaLDcKtnkOSyc4dzp4WCI02HHgDB37NNQKR3eDUNYMaCYE46FmtYOkvogtwILswkQl417YSYbsju1ziVzKgAZlWUGiYpR0N9dqkQzy83sGC6FR+dqjkxvKG5ZPHfuOwljznsShJ1byU1TyeXE2EMJr8j/5T7oorIaiHrFO7t/F9JSsoiQE5+x0H/WdZ57fhxQ/KtCNkG5WlUQr8/QlcM3shbsZVD20J6FTyZF50LiioTL7NQ8EdVdZh75ENQxTSSKSw== vlaja45@gmail.com"
+    public_key = "ssh-rsa PUBLIC KEY== yourmail@address.com"
   }
 }
