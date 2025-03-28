@@ -16,7 +16,7 @@ resource "azurerm_subnet" "subnet" {
   name                 = each.value
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.${lookup(var.subnets, each.key)}.0/24"]
+  address_prefixes     = [each.value]
 }
 
 resource "azurerm_network_security_group" "nsg" {
@@ -57,7 +57,8 @@ resource "azurerm_public_ip" "pip" {
   name                = "pip-${each.key}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 resource "azurerm_windows_virtual_machine" "win_vm" {
