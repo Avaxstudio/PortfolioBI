@@ -11,10 +11,9 @@ variable "vnet_name" {
 }
 
 variable "subnets" {
-  type = map(string)
   default = {
-    windows = "subnet-windows"
-    linux   = "subnet-linux"
+    "linux"  = "10.0.1.0/24"
+    "windows" = "10.0.2.0/24"
   }
 }
 
